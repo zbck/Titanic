@@ -10,10 +10,10 @@ class Feature_selection:
 
 	EXTENTION = '.csv'
 	TITANIC_FEATURES = ['id', 'pclass', 'survived',
-						'name', 'sex', 'age', 'sibsp',
-						'parch', 'ticket', 'fare',
-						'cabin', 'embarked', 'boat',
-						'body', 'home.dest', 'has_cabin_number']
+				'name', 'sex', 'age', 'sibsp',
+				'parch', 'ticket', 'fare',
+				'cabin', 'embarked', 'boat',
+				'body', 'home.dest', 'has_cabin_number']
 	# Array with clean features
 	NEW_ARRAY = []
 	
@@ -84,7 +84,7 @@ class Feature_selection:
 		''' Write an array into a csv file
 		'''
 		np.save(output_file, np.reshape(np.array(self.NEW_ARRAY),
-										(-1,len(self.FEATURES))))
+							(-1,len(self.FEATURES))))
 			
 					
 
