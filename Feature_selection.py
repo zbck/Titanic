@@ -94,7 +94,7 @@ if __name__=='__main__':
 	output_file = 'data/train_data_clean'
 	#output_file = 'data/train_label_clean'
 	features_wanted = ['pclass', 'sex',
-						'age', 'sibsp', 'fare']
+				'age', 'sibsp', 'fare']
 	#features_wanted = ['survived']
 	param_selec = Feature_selection(filepath, features_wanted)
 	param_selec.feature_select()
