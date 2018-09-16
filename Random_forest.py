@@ -1,4 +1,3 @@
-import csv
 import numpy as np
 
 from sklearn.ensemble import RandomForestClassifier
@@ -9,7 +8,7 @@ class Random_forest:
 
 	def __init__(self, data_filepath, label_filepath):
 		self.DATA, self.LABELS = self._load_data(data_filepath,
-												label_filepath)
+							label_filepath)
 
 	def _load_data(self, data_filepath, label_filepath):
 		'''Load the data from .npy files
@@ -22,8 +21,8 @@ class Random_forest:
 		''' Train the random forest classifier
 		''' 
 		X_train, X_test, y_train, y_test = train_test_split(self.DATA,
-															self.LABELS,
-															test_size=0.33)
+									self.LABELS,
+									test_size=0.33)
 		forest = RandomForestClassifier(n_estimators=100, random_state=0)
 		forest.fit(X_train, y_train)
 
